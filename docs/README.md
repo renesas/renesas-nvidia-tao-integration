@@ -1,0 +1,1 @@
+** This stores the user manual and various assets for neatness** 

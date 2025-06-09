@@ -1,0 +1,1 @@
+** please use this to store all screenshots/images and use relative links **
