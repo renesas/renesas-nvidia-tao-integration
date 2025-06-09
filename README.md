@@ -91,7 +91,7 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
     ./docker_gpu_install.sh
     ./setup_tao_env.sh
     ```
-    This should start the setup script and install the necessary dependancies to use the GUI and the Jupyter notebooks.  
+    This should start the setup script and install the necessary dependancies to use the GUI and the Jupyter notebooks. Ensure to select `TAO`, `TOOLs`, `Easy_GUI` and `Pre_image`.   
     For Reneasas RZ/V, please install and setup AI SDK that includes DRP-AI TVM v2.5, steps 3-5 from [here](https://renesas-rz.github.io/rzv_ai_sdk/latest/getting_started.html#step3).
 
 4. To start Renesas AI Model Deployer:
