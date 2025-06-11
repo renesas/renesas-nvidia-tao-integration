@@ -93,3 +93,8 @@ For MPUs, once you input the IP address and successfully detect the board, if yo
 
 ### (VIII) Pre-trained model paths is empty
 In training page, once you select your model, if the `Pre Trained Model Paths` does not provide a selection, you may have either missed downloading the model or moved it into an incorrect directory. Review the example `Readme.md` page to understand where and how to leverage a pretrained model.
+
+### (IX) Training fails error
+Care should be taken choosing the batch size, an out of memory can occur causing the training to fail. 
+Please reduce the batch size and try again.  
+From testing, batch size of 4 did not fail on all systems. 
