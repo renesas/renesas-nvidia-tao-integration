@@ -2,7 +2,7 @@
 
 To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**:
 
-1. Please download `Renesas_AI_Model_Deployer_vX.Y.Z.tar` under assets in [releases](https://github.com/ES-Renesas/Renesas-Nvidia-TAO-Integration/releases/latest).
+1. Please download `Renesas_AI_Model_Deployer_vX.Y.Z.tar` under assets in [releases](https://github.com/renesas/Renesas-Nvidia-TAO-Integration/releases/latest).
 
 2. Expand the archive at the location for installation and execution/data storage:
     - The following is showing the steps for the home directory
