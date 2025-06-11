@@ -22,54 +22,72 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
 
 5. Run the following shell scripts inside of the project directory:
 
-    - Make the shell scripts executable: ```sh chmod ug+x *.sh ```  
-    - Start the installation process: ```sh ./setup_tao_env.sh ```  
+    - Make the shell scripts executable: 
+        ```
+        sh chmod ug+x *.sh
+        ```  
+    - Setup Docker and NVIDIA GPU:
+        ```
+        ./docker_gpu_install.sh
+        ```
+
+    - Start the installation process: 
+        ```
+        sh ./setup_tao_env.sh
+         ```  
 
 
-    This should start the setup script and prompt you to enter you your  
-    username sudo password, followed by an installation options tab.  
-    Ensure to select **TAO**, **TOOLs**, **Easy_GUI** and **Pre_image**.  
-    This will install the necessary dependencies to use the GUI and the  
-    Jupyter notebooks.  
+    This should start the setup script and prompt you to enter you your username sudo password, followed by an installation options tab.Ensure to select **TAO**, **TOOLs**, **Easy_GUI** and **Pre_image**.This will install the necessary dependencies to use the GUI and the Jupyter notebooks.  
   
-    During the first installation the script will ask you for the N **GC token**.  
-    Please insert the **Token** you got from **NVIDIA NGC registration process at 3**.
-    > **Without the correct token the tool chain will not be functional.**
+    During the first installation, the script will ask you for the  **NGC token**.  
+    Please insert the **Token** you got from NVIDIA NGC registration process at 3.
+    > **Notes:** Without the correct token the tool chain will not be functional.
   
-6. Download the required neural models from NVIDA by ngc for this the following call can be used:
+### Quick method to download models
+
+Download the required models from NVIDA by ngc for this the following call can be used:
      
-   ```sh ./bin/ngc_model_download.sh --pull_resnet18 --pull_mobilenet_v2] --pull_fan_small_hybrid_nvimagenet ```
+   ```
+   sh ./bin/ngc_model_download.sh --pull_resnet18 --pull_mobilenet_v2 --pull_fan_small_hybrid_nvimagenet 
+   ```
    
-   - The above line shows the download for all three currently supported ai models, please adapt the  
-         cli options to your model use requirement.
+   - The above line shows the download for all three currently supported AI models, please adapt the  CLI options to your model use requirement. Alternatively, you can manually download the models as explained in each example page.
 
-7. Install the environment for DRP-AI TVM to support model translation for the RZV2L and RZV2H EVK
+
+### Board enviroment setup
+Install the environment for DRP-AI TVM to support model translation for the RZ/V2L and RZ/V2H EVK
   
-    For Reneasas RZ/V2H, please install and setup **RZV2H AI SDK (V520)**,  
-    steps 3-5 from **[here](https://renesas-rz.github.io/rzv_ai_sdk/5.20/getting_started.html#step3)**.
-  
-    For Reneasas RZ/V2L, please install and setup **RZV2L AI SDK (V500)**,  
-    steps 3-5 from **[here](https://renesas-rz.github.io/rzv_ai_sdk/5.20/getting_started.html#step3)**.
+-   For Reneasas RZ/V2H, please install and setup **RZ/V2H AI SDK (V5.20)**, steps 3-5 from **[here](https://renesas-rz.github.io/rzv_ai_sdk/latest/getting_started.html#step3)**.
+
+-   For Reneasas RZ/V2L, please install and setup **RZV2L AI SDK (V500)**,  steps 3-5 from **[here](https://renesas-rz.github.io/rzv_ai_sdk/latest/getting_started.html#step3)**.
+
+> **Note:** Please visit the [board_bringup](../board_bringup/) page to learn more
   
 
-8. To start Renesas AI Model deployer GUI run the following command:  
+### Jupyter notebook setup
 
-       Execute in Renesas TAO directory: ```sh ./gui_start.sh ```    
+For starting jupyter Notebooks we have a wrapper script, which sets the required environment.  
   
-9.  For starting jupyter Notebooks we have a wrapper script, which sets the required environment.  
-  
-    - there are three jupyter_notebooks environments prepared  
-      please copy the one you want to use into the **assets**  
-      In case it does not exist create it with ```sh mkdir assets ```  
-      Example: ```sh cp -a ./jupyter_notebooks/detectnet_v2 assets```   
-  
-        - detectnet_v2
-        - segformer
-        - mobilenet_v2
+There are three jupyter_notebooks environments prepared. Please copy the one you want to use into the **assets**.  
+In case it does not exist create it with following command:
+```
+mkdir assets 
+```
 
-    - Please follow the steps described in the Read.me file for data set preparation (dataset directory)  
+Example:
+```
+cp -a ./jupyter_notebooks/<demo_name> assets
+```   
+Repalce `<demo_name>` with one of the following:
+- detectnet_v2
+- segformer
+- mobilenet_v2
 
-    - Execute in Renesas TAO directory:  ```sh ./jupyter-notebook ```  
+Please follow the steps described in the Read.me file for data set preparation (dataset directory)  
+Execute in project directory:  
+```
+sh ./jupyter-notebook 
+```  
 
-***Please check the quick start guide for further information***
+
 

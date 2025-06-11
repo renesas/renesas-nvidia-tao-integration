@@ -75,7 +75,7 @@ The Toolkit is tested and verified on **Ubuntu 20.04 LTS** and **Ubuntu 22.04 LT
 
 To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**:
 
-1. Please download `Renesas_AI_Model_Deployer_v_x.y.z.tar` under assets in [releases](https://github.com/ES-Renesas/Renesas-Nvidia-TAO-Integration/releases/latest).
+1. Please download `Renesas_AI_Model_Deployer_v_x.y.z.tar` under assets in [releases](https://github.com/renesas/Renesas-Nvidia-TAO-Integration/releases/latest).
 
 2.  Get your NVIDIA NGC API Key to access the NVIDIA TAO Toolkit:
     - Go to the [NGC sign-in page](https://ngc.nvidia.com/signin) and log in.
@@ -98,7 +98,7 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
     ```sh
     ./gui_start.sh 
     ```
-5.  For the Jupyter Notebooks, execute in untarred directory:
+5.  For the Jupyter Notebooks, execute in untarred project directory:
     ```sh
     ./jupyter-notebook
     ```
