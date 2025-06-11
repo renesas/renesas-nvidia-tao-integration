@@ -24,7 +24,7 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
 
     - Make the shell scripts executable: 
         ```
-        sh chmod ug+x *.sh
+        chmod ug+x *.sh
         ```  
     - Setup Docker and NVIDIA GPU:
         ```
@@ -33,7 +33,7 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
 
     - Start the installation process: 
         ```
-        sh ./setup_tao_env.sh
+        ./setup_tao_env.sh
          ```  
 
 
@@ -48,7 +48,7 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
 Download the required models from NVIDA by ngc for this the following call can be used:
      
    ```
-   sh ./bin/ngc_model_download.sh --pull_resnet18 --pull_mobilenet_v2 --pull_fan_small_hybrid_nvimagenet 
+   ./bin/ngc_model_download.sh --pull_resnet18 --pull_mobilenet_v2 --pull_fan_small_hybrid_nvimagenet 
    ```
    
    - The above line shows the download for all three currently supported AI models, please adapt the  CLI options to your model use requirement. Alternatively, you can manually download the models as explained in each example page.
@@ -86,7 +86,7 @@ Repalce `<demo_name>` with one of the following:
 Please follow the steps described in the Read.me file for data set preparation (dataset directory)  
 Execute in project directory:  
 ```
-sh ./jupyter-notebook 
+./jupyter-notebook 
 ```  
 
 
