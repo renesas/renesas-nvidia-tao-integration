@@ -84,7 +84,7 @@ This is may be an issue with NVIDIA TAO installation, to verify, in terminal:
 ```
 docker images
 ```
-If, the following two respositories are not visible `nvcr.io/nvidia/tao/tao-toolit v5.5.0-data-services` and `nvcr.io/nvidia/tao/tao-toolkit v5.0.0`, then please re-run `./setup_tao_env.sh` and insure in installation options, `Pre_image` has been selected. 
+If, the following image not visible `nvcr.io/nvidia/tao/tao-toolit v5.5.0-data-services`, then please re-run `./setup_tao_env.sh` and insure in installation options, `Pre_image` has been selected. 
 
 ### (VII) At deployment stage, image not displayed
 
