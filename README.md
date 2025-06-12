@@ -30,7 +30,7 @@ The overall flow of Renesas' integration with the NVIDIA TAO Toolkit is illustra
 
 - **`gui/`** – Instructions and usage guide for Renesas AI Model Deployer, along with explanations of available functionalities.
 - **`setup/`** – Setup guide to install NVIDIA TAO Toolkit, GPU drivers, Renesas SDKs, and other required software.
-- **`releases`** - Contains the ecncapsulated package with Renesas TAO GUI, Jupyter notebooks and one-click installation scripts allowing customers for quick install & play.
+- **`releases`** - Contains the ecncapsulated package with Renesas AI Model Deployer, Jupyter notebooks and one-click installation scripts allowing customers for quick install & play.
 
 
 ## 🖥️ System Requirements
