@@ -70,17 +70,6 @@ The results of training can be seen in table below:
 | Retrained model  | ~31 MB     | 40%            | Retrained the pruned model with 100 epochs on KITTI dataset            |
 ------------------
 
-
-The AI inference on RZ/V boards is as follows:
-
-| Board   | Inference speed (ms) |
-|---------|-----------------------|
-| RZ/V2L  | ~ 220                |
-| RZ/V2H  | ~ 30                 |
-
-> **Note** : The following results are based on DRP-AI TVM v2.5. RZ/V2L also requires a patch to offload conv layer from CPU -> DRP-AI accelerator
-
-
 A snippet of inference on board via a pre-recorded slideshow is shown below:
 
 ![Detectnet V2 inference output](../../docs/assets/Detectnet_v2_result_1.png)

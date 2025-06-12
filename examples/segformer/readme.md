@@ -64,14 +64,7 @@ The results of training after 300 epochs can be seen in table below:
 | accuracy | 0.9       | 0.9    | 0.9      |
 
 
-AI inference on RZ/V boards for this model runs entirely on the CPU, as it is not currently supported by the DRP-AI accelerator. As a result, inference performance is signifcantly lower compared to models optimized for DRP-AI:
-
-
-| Board   | Inference speed (ms) |
-|---------|----------------------|
-| RZ/V2L  | ~ 9000               |
-| RZ/V2H  | ~ 3479               |
-
+AI inference on RZ/V boards for this model runs entirely on the CPU, as it is not currently supported by the DRP-AI accelerator. As a result, inference performance is lower compared to models optimized for DRP-AI.
 
 > **Note:** Currently an embedded bug has been found in the postprocessing that causes dogs to be consistenly infered as, the following issue will be fixed in the next release of the tool.
 
