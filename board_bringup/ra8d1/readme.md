@@ -13,7 +13,7 @@ Setting up the RA8D1 platform involves two main tasks:
 | **EK-RA8D1**                    | Main board for AI demo execution                                                                      |
 | **Micro USB Cable**             | Connects power adapter to the board and deploys the application                                       |
 | **Host PC**                     | For e2 studio installation <br>*OS:* Ubuntu 20.04, 22.04, 24.04 <br>Windows 10, 11, <br>Mac OS 14, 15 |
-| **Camera Expansion Board**      | For connecting USB camera to EK-RA8D1 board (included in evaluation kit)                              |
+| **Camera Expansion Board**      | For connecting parallel camera to EK-RA8D1 board (included in evaluation kit)                              |
 | **MIPI Graphics Expansion Board** | For connecting display to EK-RA8D1 board (included in evaluation kit)                               |
 
 
