@@ -20,7 +20,20 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
     - Choose both services (NGC Catalog & Helm Chart Registry).
     - Click **Generate Key**, then **copy and store it in a safe location**.
 
-5. Run the following shell scripts inside of the project directory:
+
+5. Move the models to their respective folders before running set up scripts:
+
+Detectnetv2 : Download the pretrained weights from Nvidia NGC [here](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/pretrained_classification/files?version=resnet18).   
+Please store the `.hdf5` model under `<projectdirectory>/utils/config/detection/pretrained_model/`. 
+
+Segformer-FAN: The model should be downloaded from NVIDIA NGC [here](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/pretrained_segformer_nvimagenet).  
+Please store the `.hdf5` model under `<projectdirectory>/utils/config/Classification/segformer/pretrained_models/`. 
+
+Mobilenetv2: Download the pretrained weights from Nvidia NGC [here](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/pretrained_classification/files?version=mobilenet_v2).   
+Please store the `.hdf5` model under `<projectdirectory>/utils/config/Classification/mobilenet_v2/pretrained_models/`. 
+
+
+6. Run the following shell scripts inside of the project directory:
 
     - Make the shell scripts executable: 
         ```
@@ -78,7 +91,7 @@ Example:
 ```
 cp -a ./jupyter_notebooks/<demo_name> assets
 ```   
-Repalce `<demo_name>` with one of the following:
+Replace `<demo_name>` with one of the following:
 - detectnet_v2
 - segformer
 - mobilenet_v2
