@@ -88,6 +88,7 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
 
     ```sh
     chmod ug+x *.sh
+    chmod ug+x bin/*.sh
     ./docker_gpu_install.sh
     ./setup_tao_env.sh
     ```
