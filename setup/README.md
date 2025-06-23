@@ -9,7 +9,7 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
         ```sh
         cd ~
         tar xf Renesas_AI_Model_Deployer_vX.Y.Z.tar*
-        cd Renesas_AI_Model_Deployer  
+        cd Renesas_AI_Model_Deployer
         ```
     - In the directory is an additional README.md file with instructions and information (please take care)
 
@@ -26,8 +26,9 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
     - Make the shell scripts executable: 
         ```
         chmod ug+x *.sh
+        chmod ug+x bin/*.sh  
         ```  
-    - Setup Docker and NVIDIA GPU:
+    - Setup Docker and NVIDIA GPU (for manual run, ./setup_tao.sh is running it in auto mode):
         ```
         ./docker_gpu_install.sh
         ```
