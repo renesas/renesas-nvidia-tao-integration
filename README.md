@@ -84,7 +84,7 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
     - Choose both services (NGC Catalog & Helm Chart Registry).
     - Click **Generate Key**, then copy and store it in a safe location to be inputted during next step.
 
-3. Run run the following shell scripts within the untarred directory, its recommended to run them one by one:
+3. Run the following shell scripts within the untarred directory, its recommended to run them one by one:
 
     ```sh
     chmod ug+x *.sh
@@ -94,12 +94,16 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
     ```
     This should start the setup script and install the necessary dependancies to use the GUI and the Jupyter notebooks. Ensure to select `TAO`, `TOOLs`, `Easy_GUI` and `Pre_image`.   
     For Reneasas RZ/V, please install and setup AI SDK that includes DRP-AI TVM v2.5, steps 3-5 from [here](https://renesas-rz.github.io/rzv_ai_sdk/latest/getting_started.html#step3).
-
-4. To start Renesas AI Model Deployer:
+    ```sh
+    groups
+    ```
+    If '''docker''' is not in the reported groups then a reboot is required to finish the installation.
+   
+5. To start Renesas AI Model Deployer:
     ```sh
     ./gui_start.sh 
     ```
-5.  For the Jupyter Notebooks, execute in untarred project directory:
+6.  For the Jupyter Notebooks, execute in untarred project directory:
     ```sh
     ./jupyter-notebook
     ```
