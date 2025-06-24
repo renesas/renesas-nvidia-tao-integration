@@ -9,7 +9,7 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
         ```sh
         cd ~
         tar xf Renesas_AI_Model_Deployer_vX.Y.Z.tar*
-        cd Renesas_AI_Model_Deployer  
+        cd Renesas_AI_Model_Deployer
         ```
     - In the directory is an additional README.md file with instructions and information (please take care)
 
@@ -26,8 +26,9 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
     - Make the shell scripts executable: 
         ```
         chmod ug+x *.sh
+        chmod ug+x bin/*.sh  
         ```  
-    - Setup Docker and NVIDIA GPU:
+    - Setup Docker and NVIDIA GPU (for manual run, ./setup_tao.sh is running it in auto mode):
         ```
         ./docker_gpu_install.sh
         ```
@@ -35,14 +36,23 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
     - Start the installation process: 
         ```
         ./setup_tao_env.sh
-         ```  
+        ```  
 
 
     This should start the setup script and prompt you to enter you your username sudo password, followed by an installation options tab.Ensure to select **TAO**, **TOOLs**, **Easy_GUI** and **Pre_image**.This will install the necessary dependencies to use the GUI and the Jupyter notebooks.  
   
     During the first installation, the script will ask you for the  **NGC token**.  
     Please insert the **Token** you got from NVIDIA NGC registration process at 3.
-    > **Notes:** Without the correct token the tool chain will not be functional.
+    > **Notes:** Without the correct token the tool chain will not be functional.  
+
+    > **Notes:** Cross check the users group membership 
+
+    ```sh
+    groups
+    ```  
+
+
+   If **docker** is not in the reported groups then a reboot is required to finish the installation.  
   
 ### Quick method to download models
 
