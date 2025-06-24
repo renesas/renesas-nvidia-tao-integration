@@ -21,7 +21,7 @@ Ensure you have completed the board setup steps  for [RZ/V2L](../../board_bringu
 
 #### Model download 
 To train the model, download the pretrained weights from Nvidia NGC [here](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/pretrained_classification/files?version=resnet18).   
-Please store the `.hdf5` model under `<projectdirectory>/utils/config/detection/pretrained_model/`. 
+Please store the `.hdf5` model under `<projectdirectory>/utils/configs/detection/pretrained_model/`. 
 
 #### Dataset download
 

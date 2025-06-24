@@ -18,7 +18,7 @@ Ensure you have completed the board setup steps  for [RA8D1](../../board_bringup
 
 #### Model download 
 To train the model, download the pretrained weights from Nvidia NGC [here](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/pretrained_classification/files?version=mobilenet_v2).   
-Please store the `.hdf5` model under `<projectdirectory>/utils/config/Classification/mobilenet_v2/pretrained_models/`. 
+Please store the `.hdf5` model under `<projectdirectory>/utils/configs/Classification/mobilenet_v2/pretrained_models/`. 
 
 #### Dataset download
 

@@ -19,7 +19,7 @@ Ensure you have completed the board setup steps  for [RZ/V2L](../../board_bringu
 #### Model download 
 To train the model, the model should be downloaded from NVIDIA NGC [here](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/pretrained_segformer_nvimagenet).   
 
-Please store the `.hdf5` model under `<projectdirectory>/utils/config/Classification/segformer/pretrained_models/`. 
+Please store the `.hdf5` model under `<projectdirectory>/utils/configs/Classification/segformer/pretrained_models/`. 
 
 ### Dataset download
 
