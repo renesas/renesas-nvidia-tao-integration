@@ -2,7 +2,8 @@ name: "Mark stale issues and close"
 
 on:
   schedule:
-    - cron: '0 0 * * *' # runs daily at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   stale:
@@ -13,7 +14,10 @@ jobs:
           days-before-stale: 7
           days-before-close: 14
           stale-issue-message: |
-             This issue has been inactive for 7 days. Please provide an update if you are facing anymore troubles.Otherwise, it might be closed soon.
+            This issue has been inactive for 7 days. 
+            Please provide an update if you are still facing problems. 
+            Otherwise, it may be closed soon.
           close-issue-message: |
-            This issue has been closed due to inactivity for 14 days. Feel free to reopen if needed!
+            This issue has been closed due to 14 days of inactivity. 
+            Feel free to reopen if needed!
           exempt-issue-labels: "pinned, important, security"
