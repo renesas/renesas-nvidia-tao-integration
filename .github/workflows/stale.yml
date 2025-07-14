@@ -1,0 +1,19 @@
+name: "Mark stale issues and close"
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # runs daily at midnight UTC
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 7
+          days-before-close: 14
+          stale-issue-message: |
+             This issue has been inactive for 7 days. Please provide an update if you are facing anymore troubles.Otherwise, it might be closed soon.
+          close-issue-message: |
+            This issue has been closed due to inactivity for 14 days. Feel free to reopen if needed!
+          exempt-issue-labels: "pinned, important, security"
