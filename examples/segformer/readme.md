@@ -39,7 +39,6 @@ Dataset/
 │   └── ...
 ```
 
-
 ## GUI  
 
 To launch the GUI, navigate to project directory:
@@ -63,11 +62,28 @@ The results of training after 300 epochs can be seen in table below:
 | dogs     | 0.87      | 0.94   | 0.91     |
 | accuracy | 0.9       | 0.9    | 0.9      |
 
+### FAN-Segformer – Inference Benchmark
 
-AI inference on RZ/V boards for this model runs entirely on the CPU, as it is not currently supported by the DRP-AI accelerator. As a result, inference performance is lower compared to models optimized for DRP-AI.
+| Board   | Inference Time (ms) |
+|------------|-------------------------|
+| **RZ/V2L** | 11,000 – 13,000         |
+| **RZ/V2H** | 4,500 – 5,500           |
 
-> **Note:** Currently an embedded bug has been found in the postprocessing that causes dogs to be consistenly infered as, the following issue will be fixed in the next release of the tool.
+AI inference on RZ/V boards for this model runs entirely on the CPU, as it is not currently supported by the DRP-AI accelerator. As a result, inference performance is significantly lower compared to models optimized for DRP-AI.
 
+A snippet of inference on board via a pre-recorded slideshow is shown below:
+
+![FAN-Segformer inference output on RZ/V2H](../../docs/assets/FAN_Segformer_result_1.png)
+
+
+## Deploy without GUI
+
+The GUI allows you to run inference via a connected USB camera to the MPU board. For demo purposes, the model was trained on static images which would lead to reduced accuracy via the USB camera, as such, it is possible to run inference on a video with a collection of training images. 
+To achieve that, after export and deployment via GUI, a new folder will be created under `<project_directory>/assets/<Project_name>/<Project_name>`.
+This folder will be the app that contains the embedded code and model object code that has been deployed on to the board. 
+You will need to secure copy a set of images bundled into a video to the same directory onto the MPU `/home/root/<Project_name>`, from there you can then run the app with `VIDEO <name_of_video>` command. 
+In general, this is the same method use as in [quick deploy](/quick_deploy/README.md). Following that method would allow you to vizualize your trained model performance on a test dataset of your choice in a video format. 
+A video test dataset is provided in the `.tar.gz` files in quick deploy as well.
 
 
 ## Jupyter Notebook
@@ -85,11 +101,5 @@ Before using the Jupyter Notebooks, make sure the setup scripts have been execut
     take care that the selected jupyter kernel is SOS.
 4. Select Jupyter notebook kernel as `SoS` and all the cells to be executed with `SoS` kernel.
 5. Please take care of dataset as you would need to move it to the dataset directory and split it to `train:valid:test` manually.
-
-
-## Known Issues
-
-- In the Segformer demo, at deployment on MPU, the output is always "dog" due to a post-processing bug during deployment. This issue will be addressed in the upcoming release.
-
 
 

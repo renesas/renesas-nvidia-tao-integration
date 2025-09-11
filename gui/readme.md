@@ -59,6 +59,7 @@ Some configurable parameters within the GUI include:
 - **Epochs**: Number of complete training cycles over the dataset  
 - **Enable QAT**: Option to use Quantization-Aware Training (for retraining)  
 - **Image Width/Height**: Input size for the model (dependent on your dataset/model)
+- **Enable  Pre-trained model**: For the DetectNetV2 model, disabling this option uses a randomly initialized model instead of a pre-trained one. This lets you train on images with custom dimensions (multiples of 16) rather than being restricted to the KITTI resolution used by the pre-trained model.
 
 > **Note:** If the accuracy is not satisfactory after evaluation, you can retrain the model by re-running this step.  
 For advanced configuration, modify the `train_config.yaml` file directly.
@@ -102,7 +103,7 @@ This visual feedback helps you understand which images the model handles well an
 Once the model is finalized, you can deploy it to your board.
 
 - **MCU**: Download the generated `.cc` file and integrate it into e2 studio to visualize results.  
-- **MPU**: Use the Renesas AI Model Deployer GUI to visualize real-time inference using a USB camera connected to the board, and an Ethernet connection to the host.
+- **MPU**: Use the Renesas AI Model Deployer GUI to visualize real-time inference using a USB camera connected to the board, and an Ethernet connection to the host.  
 
 ---
 

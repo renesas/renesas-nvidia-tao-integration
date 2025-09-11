@@ -118,7 +118,7 @@ The AI inference on RA8D1 boards is as follows:
 
 | Board   | Inference speed (ms) |
 |---------|-----------------------|
-| RA8D1   | ~ 300-500                 |
+| RA8D1   | ~ 500                 |
 
 > **Note** : Model size and inference speed depend on pruning results. For the same model structure, pruning reductions vary based on learned weights.
 

@@ -63,19 +63,42 @@ For more detailed instructions, please visit [GUI directory](../../gui/readme.md
 
 The results of training can be seen in table below:
 
-| Model             | Model size | Accuracy (mAP) | Remarks                                                                 |
-|------------------|------------|----------------|-------------------------------------------------------------------------|
-| Trained model    | ~59 MB     | 38%            | Trained with 100 epochs on KITTI dataset (car, pedestrian, cyclist)    |
-| Pruned model (Th: 0.5) | ~31 MB     | -              | No evaluation for pruned model                                          |
-| Retrained model  | ~31 MB     | 40%            | Retrained the pruned model with 100 epochs on KITTI dataset            |
+
+**DetectNet V2 – Model Performance**
+
+- **Confidence Threshold:** 0.5  
+- **Resolution:** 384×1248  
+- **Epochs:** 120  
+
+| **Results**                 | **Car (AP)** | **Pedestrian (AP)** | **Cyclist (AP)** | **mAP**   |
+|----------------------------|-------------|--------------------|-----------------|---------|
+| **HDF5 (test data)**       | 71.61%      | 62.93%             | 85.66%          | 73.40%  |
+| **ONNX (test data)**       | 71.60%      | 62.88%             | 85.59%          | 73.36%  |
+
+
+
+### Detectnet V2 – Inference Benchmark
+
+| Board   | Inference Time (ms) |
+|------------|-------------------------|
+| **RZ/V2L** | ~210      |
+| **RZ/V2H** | ~28         |
 ------------------
 
 A snippet of inference on board via a pre-recorded slideshow is shown below:
 
-![Detectnet V2 inference output](../../docs/assets/Detectnet_v2_result_1.png)
+![Detectnet V2 inference output on RZ/V2H](../../docs/assets/Detectnet_v2_result_1.png)
+
+## Deploy without GUI
+
+The GUI allows you to run inference via a connected USB camera to the MPU board. For demo purposes, the model was trained on static images which would lead to reduced accuracy via the USB camera, as such, it is possible to run inference on a video with a collection of training images. 
+To achieve that, after export and deployment via GUI, a new folder will be created under `<project_directory>/assets/<Project_name>/<Project_name>`.
+This folder will be the app that contains the embedded code and model object code that has been deployed on to the board. 
+You will need to secure copy a set of images bundled into a video to the same directory onto the MPU `/home/root/<Project_name>`, from there you can then run the app with `VIDEO <name_of_video>` command. 
+In general, this is the same method use as in [quick deploy](/quick_deploy/README.md). Following that method would allow you to vizualize your trained model performance on a test dataset of your choice in a video format. 
+A video test dataset is provided in the `.tar.gz` files in quick deploy as well.
 
 
-> **Note:** Currently an embedded bug has been found in the preprocessing that cause the bounding boxes to be drawn incorrectly, the following issue will be fixed in the next release of the tool.
 
 ## Jupyter Notebook
 
@@ -95,8 +118,3 @@ Before using the Jupyter Notebooks, make sure the setup scripts have been execut
 5. Please take care of dataset  as you would need to move it to the dataset directory..
 
 
-## Known Issues
-
-- In the DetectNet_v2 demo, bounding boxes are drawn incorrectly and only for one class due to a post-processing issue during deployment. This will be fixed in the next release.
-
-- For the DetectNet_v2 demo on RZ/V2L, inference speed is currently ~1–3 seconds as the first convolution layer runs on the CPU. A patch in the next release will offload this to DRP-AI, reducing inference time to ~220 ms.

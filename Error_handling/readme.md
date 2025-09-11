@@ -98,3 +98,14 @@ In training page, once you select your model, if the `Pre Trained Model Paths` d
 Care should be taken choosing the batch size, an out of memory can occur causing the training to fail. 
 Please reduce the batch size and try again.  
 From testing, batch size of 4 did not fail on all systems. 
+
+### (X) V2H DetectNetV2 inference is slow
+Please ensure that you are not using the AI SDK v5.20 as is. As described in [V2H_board_bringup](../board_bringup/rz_v2h/readme.md), replacing the DockerFile and DRP-AI Translator file.
+
+### (XI) SSH permission denied  
+On V2L/V2H, sometimes an error of permission denied may pop up when you try to SSH into the board. 
+```sh
+ssh root@<IP Address> ls
+ssh-keygen -f "<Path>/.ssh/known_hosts" -R "<IP address>"
+ssh root@<IP Address> ls
+```

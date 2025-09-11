@@ -29,7 +29,8 @@ The overall flow of Renesas' integration with the NVIDIA TAO Toolkit is illustra
 
 
 - **`gui/`** – Instructions and usage guide for Renesas AI Model Deployer, along with explanations of available functionalities.
-- **`setup/`** – Setup guide to install NVIDIA TAO Toolkit, GPU drivers, Renesas SDKs, and other required software.
+- **`quick_deploy/`** – Ready-made application examples (developed via by the GUI) for quick on-board performance validation.
+- **`setup/`** – Setup guide to install NVIDIA TAO , GPU drivers, Renesas SDKs, and other required software.
 - **`releases`** - Contains the ecncapsulated package with Renesas AI Model Deployer, Jupyter notebooks and one-click installation scripts allowing customers for quick install & play.
 
 
@@ -122,13 +123,17 @@ Renesas AI Model Deployer currently supports the following hardware based on res
 | RA8D1   | [EK-RA8D1](https://www.renesas.com/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ek-ra8d1-evaluation-kit-ra8d1-mcu-group)                     | MobileNetV2                                                              |
 ---
   
-## Known Issues
+## Release Notes
+Renesas AI Model Deployer v1.1 has been released with following updates:  
+1. Detectnetv2 bounding box issue has been resolved.
+2. Detectnetv2 pipeline allows variable input image resolution.
+3. FAN-Segformer classification issue has been resolved.
+4. DRP-AI has been updated leading to a speedup of up to 10x depending on the used AI-model.
+5. GUI improvements and enhancements.
+6. Quick deploy binaries have been included in binary to test application examples without installing all the S/W.
 
-- In the DetectNet_v2 demo, bounding boxes are drawn incorrectly and only for one class due to a post-processing issue during deployment. This will be fixed in the next release.
 
-- In the Segformer demo, the output is always "dog" due to a post-processing bug during deployment. This issue will be addressed in the upcoming release.
 
-- For the DetectNet_v2 demo on RZ/V2L, inference speed is currently ~1–3 seconds as the first convolution layer runs on the CPU. A patch in the next release will offload this to DRP-AI, reducing inference time to ~220 ms.
 
 
 
