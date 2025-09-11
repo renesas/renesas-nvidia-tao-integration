@@ -30,8 +30,8 @@ In order to build and flash the project, please ensure that you have appropriate
 
 **Software prerequisites** <br>
 
-**FSP version:** 5.2.0 only, installable [here](https://github.com/renesas/fsp/releases/tag/v5.2.0) <br>
-**E2 studio:** 2024.01.01 or later
+**FSP version:** 6.1.0 only, installable [here](https://github.com/renesas/fsp/releases/tag/v6.1.0) <br>
+**E2 studio:** 2025.04 or later
 
 
 1. Open e2 studio and select a workspace
