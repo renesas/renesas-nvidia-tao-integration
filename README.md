@@ -2,6 +2,8 @@
 
 ## 🚀 Introduction
 
+### 🎉Renesas AI Model Deployer v1.1.0 released 
+
 This repository provides demos, scripts, and an intuitive GUI to enable the [**NVIDIA TAO (Train, Adapt, Optimize) Toolkit**](https://developer.nvidia.com/tao-toolkit) on **Renesas hardware**, including DRP-AI-based MPUs and high-performance MCUs.
 
 - For **beginners**, the **Renesas AI Model Deployer** abstracts the command-line interface, enabling local execution on workstations for rapid evaluation and prototyping from training to deployment.  
@@ -124,7 +126,7 @@ Renesas AI Model Deployer currently supports the following hardware based on res
 ---
   
 ## Release Notes
-Renesas AI Model Deployer v1.1 has been released with following updates:  
+Renesas AI Model Deployer v1.1.0 has been released with following updates:  
 1. Detectnetv2 bounding box issue has been resolved.
 2. Detectnetv2 pipeline allows variable input image resolution.
 3. FAN-Segformer classification issue has been resolved.
