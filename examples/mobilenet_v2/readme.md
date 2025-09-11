@@ -20,6 +20,8 @@ Ensure you have completed the board setup steps  for [RA8D1](../../board_bringup
 To train the model, download the pretrained weights from Nvidia NGC [here](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/pretrained_classification/files?version=mobilenet_v2).   
 Please store the `.hdf5` model under `<projectdirectory>/utils/configs/Classification/mobilenet_v2/pretrained_models/`. 
 
+The application code is based on FSP v6.1 and CMSIS-NN 7.0
+
 #### Dataset download
 
 For this demo, an ImageFolder-formatted dataset is used to train a model on ten classes: biodegradable, cardboard, glass, gloves, masks, meficines, metal, paper, plastic, and syringe.
