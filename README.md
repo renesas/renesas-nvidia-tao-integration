@@ -2,7 +2,7 @@
 
 ## 🚀 Introduction
 
-### 🎉Renesas AI Model Deployer v1.1.0 released 
+### 🎉Renesas AI Model Deployer v1.1.0 released, packaged can be accessed [here](https://github.com/renesas/Renesas-Nvidia-TAO-Integration/releases/latest)
 
 This repository provides demos, scripts, and an intuitive GUI to enable the [**NVIDIA TAO (Train, Adapt, Optimize) Toolkit**](https://developer.nvidia.com/tao-toolkit) on **Renesas hardware**, including DRP-AI-based MPUs and high-performance MCUs.
 
