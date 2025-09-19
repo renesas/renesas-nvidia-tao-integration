@@ -5,7 +5,7 @@ These are **prebuilt application example(s)** for Renesas EK-RA8D1.
 
 Two methods will be provided for each application.
 1. A `.Hex` file provided in the directory can be flashed onto the board via Renesas Flash Programmer ([RFP](https://www.renesas.com/en/software-tool/renesas-flash-programmer-programming-gui?srsltid=AfmBOor9zRK_Bnz-5BXw7-o--o9hc7EWvndavQA7Rb7EMrKl2CX_rNH3#overview)).
-2. Project source code that can be imported into E2 studio, built and flashed onto the board.
+2. Project source code `.zip` file that can be imported into E2 studio, built and flashed onto the board.
 
 ### Hardware Setup
 
