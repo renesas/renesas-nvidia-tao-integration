@@ -2,7 +2,7 @@
 
 Setting up the RA8D1 platform involves two main tasks:
 
-1. **Installing the e2 studio on host machine** — used for compiling mcu project with learned model.FSP 5.7.0 was used for testing.  
+1. **Installing the e2 studio on host machine** — used for compiling mcu project with learned model.  
 2. **Preparing the EK-RA8D1**
 
 ---
