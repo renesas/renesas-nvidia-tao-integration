@@ -28,10 +28,7 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
         chmod ug+x *.sh
         chmod ug+x bin/*.sh  
         ```  
-    - Setup Docker and NVIDIA GPU (for manual run, ./setup_tao.sh is running it in auto mode):
-        ```
-        ./docker_gpu_install.sh
-        ```
+
 
     - Start the installation process: 
         ```
