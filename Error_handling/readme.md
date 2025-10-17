@@ -109,3 +109,8 @@ ssh root@<IP Address> ls
 ssh-keygen -f "<Path>/.ssh/known_hosts" -R "<IP address>"
 ssh root@<IP Address> ls
 ```
+### (XII) Accuracy during training/evaluation is low
+The accuracy being low can be due to several reasons, a few ways to solve it:
+- Train the model for more number of epochs, if accuracy goes up with every epochs, train till stagnation
+- If increase in epochs does not help in accuracy, add more high quality data
+- If adding more data and expanding number of epochs do not improve accuracy, vary the hyperparamter in `.yaml` file, this requires higher level expertise, so we recommend to transition to the Jupyter notebooks.
