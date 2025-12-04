@@ -36,13 +36,12 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
         ```  
 
 
-    This should start the setup script and prompt you to enter you your username sudo password, followed by an installation options tab.Ensure to select **TAO**, **TOOLs**, **Easy_GUI** and **Pre_image**.This will install the necessary dependencies to use the GUI and the Jupyter notebooks.  
+    This should start the setup script and prompt you to enter you your username sudo password, followed by an installation options tab.Ensure to select **TAO**, **TOOLs**, **Easy_GUI**, **RUHMI** **Pre_image**.This will install the necessary dependencies to use the GUI and the Jupyter notebooks.  
   
     During the first installation, the script will ask you for the  **NGC token**.  
     Please insert the **Token** you got from NVIDIA NGC registration process at 3.
-    > **Notes:** Without the correct token the tool chain will not be functional.  
-
-    > **Notes:** Cross check the users group membership 
+    > **Notes:** Without the correct token the tool chain will not be functional.   
+    Cross check the users group membership 
 
     ```sh
     groups
@@ -59,15 +58,15 @@ Download the required models from NVIDA by ngc for this the following call can b
    ./bin/ngc_model_download.sh --pull_resnet18 --pull_mobilenet_v2 --pull_fan_small_hybrid_nvimagenet 
    ```
    
-   - The above line shows the download for all three currently supported AI models, please adapt the  CLI options to your model use requirement. Alternatively, you can manually download the models as explained in each example page.
+   The above line shows the download for all three currently supported AI models, please adapt the  CLI options to your model use requirement. Alternatively, you can manually download the models as explained in each example page.
 
 
-### Board enviroment setup
+### Board Enviroment Setup
 Install the environment for DRP-AI TVM to support model translation for the RZ/V2L and RZ/V2H EVK
   
 -   For Reneasas RZ/V2H, please install and setup **RZ/V2H AI SDK (V5.20)**, steps 3-5 from **[here](https://renesas-rz.github.io/rzv_ai_sdk/latest/getting_started.html#step3)**.
 
--   For Reneasas RZ/V2L, please install and setup **RZV2L AI SDK (V500)**,  steps 3-5 from **[here](https://renesas-rz.github.io/rzv_ai_sdk/latest/getting_started.html#step3)**.
+-   For Reneasas RZ/V2L, please install and setup **RZV2L AI SDK (V5.00)**,  steps 3-5 from **[here](https://renesas-rz.github.io/rzv_ai_sdk/latest/getting_started.html#step3)**.
 
 > **Note:** Please visit the [board_bringup](../board_bringup/) page to learn more
   

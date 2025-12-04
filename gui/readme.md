@@ -5,7 +5,7 @@
 
 ## 🔧 What It Does
 
-- **Easy Setup**: Launch the GUI and environment using two shell scripts.
+- **Easy Setup**: Launch the GUI and environment using a shell scripts.
 - **Project-Based Workflow**: Define the model architecture, board type, and task (classification or detection).
 - **Dataset Tools**: Split datasets, check class balance, and prepare them for training.
 - **Model Training & Optimization**: Supports pruning and Quantization-Aware Training (QAT).
@@ -32,7 +32,9 @@ The overall GUI flow mapped to NVIDIA toolkit features shown in figure below:
 
 When you open the GUI, you are greeted with a landing page where you can either create a new project or load an existing one.
 
-To create a project, you can specify the project name, provide a description, choose the vision problem (image classification or object detection), and select the target board.
+To create a project, you can specify the project name, provide a description, choose the vision problem (image classification or object detection), and select the target board.  
+For MCUs, two compilers are support, tensorflow lite for microcontrollers and [Renesas RUHMI AI compiler](https://github.com/renesas/ruhmi-framework-mcu)
+
 
 ![Project creation](../docs/assets/GUI_create_page.png)
 

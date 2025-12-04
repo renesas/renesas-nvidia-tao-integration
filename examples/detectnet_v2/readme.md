@@ -59,6 +59,8 @@ A simple end-to-end GIF can be viewed below:
 
 For more detailed instructions, please visit [GUI directory](../../gui/readme.md).  
 
+> **Note:** In training section of Detectnetv2 pipeline, you are able toggle between pre-trained weights and random weights. The random weights models enable you to vary the input resolution but would require a longer training time.
+
 ## Results 
 
 The results of training can be seen in table below:

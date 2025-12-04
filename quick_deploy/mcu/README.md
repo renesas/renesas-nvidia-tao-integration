@@ -1,6 +1,6 @@
 ### Quick Deploy (MCU) 
 
-These are **prebuilt application example(s)** for Renesas EK-RA8D1. 
+These are **prebuilt application example(s)** for Renesas EK-RA8D1, AIK-RA8D1 or EK-RA8P1. 
 
 
 Two methods will be provided for each application.
@@ -30,7 +30,7 @@ In order to build and flash the project, please ensure that you have appropriate
 
 **Software prerequisites** <br>
 
-**FSP version:** 6.1.0 only, installable [here](https://github.com/renesas/fsp/releases/tag/v6.1.0) <br>
+**FSP version:** 6.2.0 only, installable [here](https://github.com/renesas/fsp/releases/tag/v6.2.0) <br>
 **E2 studio:** 2025.04 or later
 
 

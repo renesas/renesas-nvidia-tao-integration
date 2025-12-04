@@ -2,7 +2,7 @@
 
 ## 🚀 Introduction
 
-### 🎉Renesas AI Model Deployer v1.1.0 released, packaged can be accessed [here](https://github.com/renesas/Renesas-Nvidia-TAO-Integration/releases/latest)
+### 🎉Renesas AI Model Deployer v1.2.0 released, packaged can be accessed [here](https://github.com/renesas/Renesas-Nvidia-TAO-Integration/releases/latest)
 
 This repository provides demos, scripts, and an intuitive GUI to enable the [**NVIDIA TAO (Train, Adapt, Optimize) Toolkit**](https://developer.nvidia.com/tao-toolkit) on **Renesas hardware**, including DRP-AI-based MPUs and high-performance MCUs.
 
@@ -20,14 +20,15 @@ The overall flow of Renesas' integration with the NVIDIA TAO Toolkit is illustra
 
 - **`board_bringup/`** – Instructions to bring up Renesas boards and prepare the environment for deployment.
 - **`docs/`** – Reference documents, assets, and collateral.
-- **`examples/`** – End-to-end demo pipelines provided by Renesas. As of the current release, the following three pipelines are supported:
+- **`examples/`** – End-to-end demo pipelines provided by Renesas. As of the current release, the following four pipelines are supported:
 
 
 | Model                                   | Pipeline Support      | Use Case             | Devices Supported       | Reference                                                                                              |
 |----------------------------------------|------------------------|-----------------------|--------------------------|----------------------------------------------------------------------------------------------------------|
-| MobileNet v2                            | GUI & Notebooks       | Image Classification | RA8D1                    | [NGC Pretrained Classification](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/pretrained_classification) |
+| MobileNet v2                            | GUI & Notebooks       | Image Classification | EK-RA8D1, AIK-RA8D1, EK-RA8P1                    | [NGC Pretrained Classification](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/pretrained_classification) |
 | SegFormer-FAN hybrid Vision Transformer | GUI & Notebooks       | Image Classification | RZ/V2H or RZ/V2L         | [NGC Pretrained SegFormer](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/pretrained_segformer_nvimagenet) |
 | DetectNetv2 (ResNet18 backbone)         | GUI & Notebooks       | Object Detection      | RZ/V2H or RZ/V2L         | [TAO Pretrained DetectNet V2](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/pretrained_detectnet_v2)     |
+| Mobilenetv2_BYOM       | Notebooks       | Image Classification      | EK-RA8D1         | [TAO BYOM](https://github.com/NVIDIA-AI-IOT/tao_byom_examples)    |
 
 
 - **`gui/`** – Instructions and usage guide for Renesas AI Model Deployer, along with explanations of available functionalities.
@@ -44,19 +45,15 @@ The Toolkit is tested and verified on **Ubuntu 20.04 LTS** and **Ubuntu 22.04 LT
 
 ### Hardware Requirements
 
-#### Minimum Configuration
-- 8 GB system RAM  
-- 4 GB GPU RAM  
-- 8-core CPU  
-- 1 NVIDIA GPU  
-- 100 GB SSD storage  
 
-#### Recommended Configuration
-- 32 GB system RAM  
-- 32 GB GPU RAM  
-- 8-core CPU  
-- 1 NVIDIA GPU  
-- 100 GB SSD storage  
+| Component | Minimum Configuration | Recommended Configuration |
+| :--- | :--- | :--- |
+| **System RAM** | 8 GB | 32 GB |
+| **GPU RAM** | 4 GB | 32 GB |
+| **CPU** | 8-core | 8-core |
+| **GPU** | 1 NVIDIA GPU | 1 NVIDIA GPU |
+| **Storage** | 100 GB SSD | 100 GB SSD |
+
 
 > **Note:**  
 > TAO Toolkit is supported on discrete GPUs such as **H100, A100, A40, A30, A2, A16, A100x, A30x, V100, T4, Titan RTX, and Quadro RTX**.  
@@ -92,7 +89,6 @@ To get started using **Renesas AI Model Deployer** and the **Jupyter notebooks**
     ```sh
     chmod ug+x *.sh
     chmod ug+x bin/*.sh
-    ./docker_gpu_install.sh
     ./setup_tao_env.sh
     ```
     This should start the setup script and install the necessary dependancies to use the GUI and the Jupyter notebooks. Ensure to select `TAO`, `TOOLs`, `Easy_GUI` and `Pre_image`.   
@@ -122,18 +118,20 @@ Renesas AI Model Deployer currently supports the following hardware based on res
 |---------|----------------------------------------------------------------------------------|--------------------------------------------------------------------------|
 | RZ/V2L  | [RZ/V2L-EVKIT](https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzv2l-evkit-smarc-som-evaluation-kit-rzv2l-mpu-ai-accelerator) | SegFormer-FAN hybrid Vision Transformer, DetectNetv2                     |
 | RZ/V2H  | [RZ/V2H-EVKIT](https://www.renesas.com/en/products/microcontrollers-microprocessors/rz-mpus/rzv2h-evk-rzv2h-quad-core-vision-ai-mpu-evaluation-kit)             | SegFormer-FAN hybrid Vision Transformer, DetectNetv2                     |
-| RA8D1   | [EK-RA8D1](https://www.renesas.com/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ek-ra8d1-evaluation-kit-ra8d1-mcu-group)                     | MobileNetV2                                                              |
+| RA8D1   | [EK-RA8D1](https://www.renesas.com/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ek-ra8d1-evaluation-kit-ra8d1-mcu-group)    or [AIK-RA8D1](https://www.renesas.com/en/design-resources/boards-kits/aik-ra8d1)                  | MobileNetV2                                                              |
+| RA8P1   | [EK-RA8P1](https://www.renesas.com/en/design-resources/boards-kits/ek-ra8p1)                  | MobileNetV2                                                          |
 ---
   
 ## Release Notes
-Renesas AI Model Deployer v1.1.0 has been released with following updates:  
-1. Detectnetv2 bounding box issue has been resolved.
-2. Detectnetv2 pipeline allows variable input image resolution.
-3. FAN-Segformer classification issue has been resolved.
-4. DRP-AI has been updated leading to a speedup of up to 10x depending on the used AI-model.
-5. GUI improvements and enhancements.
-6. Quick deploy binaries have been included in binary to test application examples without installing all the S/W.
 
+Renesas AI Model Deployer v1.2.0 has been released with following updates:  
+1. Support for AIK-RA8D1 kit for MCU pipelines.
+2. Support for EK-RA8P1 kit for MCU pipelines.
+3. Adding RUHMI AI compiler as option for RA8D1/P1.
+4. Adding BYOM example along with jupyter notebooks.
+5. GUI improvements and enhancements.
+6. Quick deploy binaries for EK-RA8P1 and AIK-RA8D1.
+7. Upgrading to FSP v6.2 for all MCU projects
 
 
 
